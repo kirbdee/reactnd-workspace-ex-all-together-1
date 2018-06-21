@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Gamers from './Gamers';
 
 /*
 This exercise will help you put together and practice all of the concepts you've
@@ -14,10 +15,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">ReactND - Coding Practice</h1>
-        </header>
+        <Header/>
+        <Gamers/>
       </div>
     );
   }
