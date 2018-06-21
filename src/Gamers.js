@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NewGamer from './NewGamer';
+import GamerList from './GamerList';
 
 class Gamers extends Component {
     state = {
@@ -77,11 +78,7 @@ class Gamers extends Component {
     render = () => (
         <div className="gamers">
             <NewGamer addNewGamer={this.addUserName} gamers={this.state.gamers}/>
-            <ul>
-                {this.getUserNames().map((username) => 
-                    (<li key={username}>{username} has played {this.getUsersGamesPlayed(username)} games</li>)
-                )}
-            </ul>
+            <GamerList users={this.state.gamers}/>
         </div>
     );
 }
